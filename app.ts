@@ -1,11 +1,9 @@
-// const person: {
-// 	name: string;
-// 	age: number;
-// }
+function addd(n1: number, n2: number): number {
+	return n1 + n2;
+}
 
-const person = {
-	name: "Max",
-	age: 30,
-};
+function printResult(num: number) {
+	console.log("Result: " + num);
+}
 
-console.log(person.name);
+printResult(addd(5, 12));

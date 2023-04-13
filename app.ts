@@ -1,9 +1,14 @@
-function addd(n1: number, n2: number): number {
-	return n1 + n2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = "Max";
+if (typeof userInput === "string") {
+	userName = userInput;
 }
 
-function printResult2(num: number): void {
-	console.log("Result: " + num);
+function generateError(message: string, code: number): never {
+	throw { message: message, errorCode: code };
 }
 
-printResult2(addd(5, 12));
+generateError("An error occured", 500);

@@ -1,14 +1,7 @@
-let userInput: unknown;
-let userName: string;
+const button = document.querySelector("button")!;
 
-userInput = 5;
-userInput = "Max";
-if (typeof userInput === "string") {
-	userName = userInput;
+if (button) {
+	button.addEventListener("click", () => {
+		console.log("Clicked!");
+	});
 }
-
-function generateError(message: string, code: number): never {
-	throw { message: message, errorCode: code };
-}
-
-generateError("An error occured", 500);

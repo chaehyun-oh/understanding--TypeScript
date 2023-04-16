@@ -1,68 +1,38 @@
-// const button = document.querySelector("button")!;
+class Department {
+	private id: string;
+	private name: string;
+	private employees: string[] = [];
 
-// if (button) {
-// 	button.addEventListener("click", () => {
-// 		console.log("Clicked!");
-// 	});
-// }
+	constructor(n: string) {
+		this.name = n;
+	}
 
-// const userName = 'Max';
-// // userName = 'Maximilian';
-// let age = 30;
+	describe() {
+		console.log("Department: " + this.name);
+	}
 
-// age = 29;
+	addEmployee(employee: string) {
+		this.employees.push(employee);
+	}
 
-// function add(a: number, b: number) {
-//   let result;
-//   result = a + b;
-//   return result;
-// }
+	printEmployeeInfo() {
+		console.log(this.employees.length);
+		console.log(this.employees);
+	}
+}
 
-// if (age > 20) {
-//   let isOld = true;
-// }
+const accounting = new Department("Accounting");
 
-// console.log(isOld);
+// console.log(accounting);
 
-// console.log(result);
+accounting.addEmployee("Max");
+accounting.addEmployee("Anna");
 
-// const add = (a: number, b: number = 1) => a + b;
+// accounting.employess[2] = "Jane"; //ERROR
 
-// const printOutput: (a: number | string) => void = output => console.log(output);
+accounting.describe();
+accounting.printEmployeeInfo();
 
-// const button = document.querySelector('button');
+// const accountingCopy = { name: "dummy", describe: accounting.describe };
 
-// if (button) {
-//   button.addEventListener('click', event => console.log(event));
-// }
-
-// printOutput(add(5));
-
-const hobbies = ["Sports", "Cooking"];
-const activeHobbies = ["Hiking"];
-
-activeHobbies.push(...hobbies);
-
-const person = {
-	firstName: "Max",
-	age: 30,
-};
-
-const copiedPerson = { ...person };
-
-const add = (...numbers: number[]) => {
-	return numbers.reduce((curResult, curValue) => {
-		return curResult + curValue;
-	}, 0);
-};
-
-const addedNumbers = add(5, 10, 2, 3.7);
-console.log(addedNumbers);
-
-const [hobby1, hobby2, ...remainingHobbies] = hobbies;
-
-console.log(hobbies, hobby1, hobby2);
-
-const { firstName: userName, age } = person;
-
-console.log(userName, age, person);
+// accountingCopy.describe();

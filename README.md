@@ -11,3 +11,4 @@
 | [Day 5](./markdown/230414.md) | S.3 The TypeScript Compiler (and its Configuration) (33~47) |
 | [Day 7](./markdown/230416.md) | S.5 Classes & Interfaces (57~62)                            |
 | [Day 8](./markdown/230417.md) | S.5 Classes & Interfaces (63~71)                            |
+| [Day 9](./markdown/230418.md) | S.5 Classes & Interfaces (72~81)                            |

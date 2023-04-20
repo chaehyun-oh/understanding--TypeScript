@@ -12,4 +12,7 @@
 | [Day 7](./markdown/230416.md)  | S.5 Classes & Interfaces (57~62)                            |
 | [Day 8](./markdown/230417.md)  | S.5 Classes & Interfaces (63~71)                            |
 | [Day 9](./markdown/230418.md)  | S.5 Classes & Interfaces (72~81)                            |
-| [Day 10](./markdown/230419.md) | S.5 Classes & Interfaces (82~84)                            |
+| [Day 10](./markdown/230419.md) | S.6 Advanced Types                                          |
+| (82~84)                        |
+| [Day 11](./markdown/230419.md) | S.6 Advanced Types                                          |
+| (85~92)                        |

@@ -1,79 +1,32 @@
 "use strict";
-const e1 = {
-    name: "Max",
-    privileges: ["create-server"],
-    startDate: new Date(),
-};
-function add(a, b) {
-    if (typeof a === "string" || typeof b === "string") {
-        return a.toString() + b.toString();
-    }
-    return a + b;
+// const names: Array<string> = [];
+// // names[0].split(' ');
+// const promise: Promise<number> = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		resolve(10);
+// 	}, 2000);
+// });
+// promise.then((data) => {
+// 	// data.split(' ') // Error
+// });
+function merge(objA, objB) {
+    return Object.assign(objA, objB);
 }
-const result = add("Max", " Schwarz");
-result.split(" ");
-console.log(result.split(" "));
-const fetchedUserData = {
-    id: "u1",
-    name: "Max",
-    job: { title: "CEO", description: "My own company" },
-};
-console.log(fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job.title);
-const user = undefined;
-const storedData = user !== null && user !== void 0 ? user : "DEFAULT";
-console.log("//////////" + storedData);
-function printEmployeeInfo(emp) {
-    console.log("Name: " + emp.name);
-    if ("privileges" in emp) {
-        console.log("Privileges: " + emp.privileges);
+// console.log(merge({ name: "Max" }, { age: 30 }));
+const mergedObj = merge({ name: "Max", hobbies: ["Sports"] }, { age: 30 });
+console.log(mergedObj);
+function countAndDesc(element) {
+    let description = "Got no value.";
+    if (element.length === 1) {
+        description = "Got 1 element.";
     }
-    if ("startDate" in emp) {
-        console.log("StartDate: " + emp.startDate);
+    else if (element.length > 1) {
+        description = "Got " + element.length + " elements.";
     }
+    return [element, description];
 }
-printEmployeeInfo(e1);
-class Car {
-    drive() {
-        console.log("Driving...");
-    }
+console.log(countAndDesc("Hi there"));
+function extractAndConvert(obj, key) {
+    return obj[key];
 }
-class Truck {
-    drive() {
-        console.log("Driving a truck...");
-    }
-    loadCargo(amount) {
-        console.log("Loading cargo..." + amount);
-    }
-}
-const v1 = new Car();
-const v2 = new Truck();
-function useVehicle(vehicle) {
-    vehicle.drive();
-    if (vehicle instanceof Truck) {
-        vehicle.loadCargo(100);
-    }
-}
-useVehicle(v1);
-useVehicle(v2);
-function moveAnimal(animal) {
-    let speed;
-    switch (animal.type) {
-        case "bird":
-            speed = animal.flyingSpeed;
-            break;
-        case "horse":
-            speed = animal.runningSpeed;
-    }
-    console.log("Moving at speed: " + speed);
-}
-moveAnimal({ type: "bird", flyingSpeed: 10 });
-// const userInputEl = <HTMLInputElement>document.getElementById("user-input");
-const userInputEl = document.getElementById("user-input");
-// userInputEl.value = "Hi there";
-if (userInputEl) {
-    userInputEl.value = "Hi there!";
-}
-const errorBag = {
-    email: "Not a valid email.",
-    username: "Must start with a capital character.",
-};
+console.log(extractAndConvert({ name: "Max" }, "name"));

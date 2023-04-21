@@ -13,4 +13,5 @@
 | [Day 8](./markdown/230417.md)  | S.5 Classes & Interfaces (63~71)                            |
 | [Day 9](./markdown/230418.md)  | S.5 Classes & Interfaces (72~81)                            |
 | [Day 10](./markdown/230419.md) | S.6 Advanced Types (82~84)                                  |
-| [Day 11](./markdown/230419.md) | S.6 Advanced Types (85~92)                                  |
+| [Day 11](./markdown/230420.md) | S.6 Advanced Types (85~92)                                  |
+| [Day 12](./markdown/230421.md) | S.7 Generics (93~98)                                        |

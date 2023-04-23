@@ -1,63 +1,36 @@
 "use strict";
-// const names: Array<string> = [];
-// // names[0].split(' ');
-// const promise: Promise<number> = new Promise((resolve, reject) => {
-// 	setTimeout(() => {
-// 		resolve(10);
-// 	}, 2000);
-// });
-// promise.then((data) => {
-// 	// data.split(' ') // Error
-// });
-function merge(objA, objB) {
-    return Object.assign(objA, objB);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+function Logger(logString) {
+    return function (constructor) {
+        console.log(logString);
+        console.log(constructor);
+    };
 }
-// console.log(merge({ name: "Max" }, { age: 30 }));
-const mergedObj = merge({ name: "Max", hobbies: ["Sports"] }, { age: 30 });
-console.log(mergedObj);
-function countAndDesc(element) {
-    let description = "Got no value.";
-    if (element.length === 1) {
-        description = "Got 1 element.";
-    }
-    else if (element.length > 1) {
-        description = "Got " + element.length + " elements.";
-    }
-    return [element, description];
-}
-console.log(countAndDesc("Hi there"));
-function extractAndConvert(obj, key) {
-    return obj[key];
-}
-console.log(extractAndConvert({ name: "Max" }, "name"));
-class DataStorage {
-    constructor() {
-        this.data = [];
-    }
-    addItem(item) {
-        this.data.push(item);
-    }
-    removeItem(item) {
-        if (this.data.indexOf(item) === -1) {
-            return;
+function WithTemplate(template, hookId) {
+    return function (constructor) {
+        console.log("Rendering template");
+        const hookEl = document.getElementById(hookId);
+        const p = new constructor();
+        if (hookEl) {
+            hookEl.innerHTML = template;
+            hookEl.querySelector("h1").textContent = p.name;
         }
-        this.data.splice(this.data.indexOf(item), 1);
-    }
-    getItems() {
-        return [...this.data];
-    }
+    };
 }
-const textStorage = new DataStorage();
-textStorage.addItem("Max");
-textStorage.addItem("Manu");
-textStorage.removeItem("Max");
-console.log(textStorage.getItems());
-const numberStorage = new DataStorage();
-function createCourseGoal(title, description, date) {
-    let courseGoal = {};
-    courseGoal.title = title;
-    courseGoal.description = description;
-    courseGoal.completeUntil = date;
-    return courseGoal;
-}
-const names = ["Max", "Anna"];
+let Person = class Person {
+    constructor() {
+        this.name = "Max";
+        console.log("Creating person object...");
+    }
+};
+Person = __decorate([
+    Logger("LOGGING - PERSON"),
+    WithTemplate("<h1>My Person Object</h1>", "app")
+], Person);
+const pers = new Person();
+console.log(pers);

@@ -17,4 +17,5 @@
 | [Day 12](./markdown/230421.md) | S.7 Generics (93~98)                                        |
 | [Day 13](./markdown/230422.md) | S.7 Generics (99~103)                                       |
 | [Day 14](./markdown/230423.md) | S.8 Decorators (104~108)                                    |
-| [Day 14](./markdown/230423.md) | S.8 Decorators (109~113)                                    |
+| [Day 14](./markdown/230424.md) | S.8 Decorators (109~113)                                    |
+| [Day 15](./markdown/230425.md) | S.8 Decorators (114~119)                                    |

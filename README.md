@@ -19,3 +19,4 @@
 | [Day 14](./markdown/230423.md) | S.8 Decorators (104~108)                                    |
 | [Day 14](./markdown/230424.md) | S.8 Decorators (109~113)                                    |
 | [Day 15](./markdown/230425.md) | S.8 Decorators (114~119)                                    |
+| [Day 16](./markdown/230426.md) | S.9 Let’s build a Drag & Drop Project (120~125)             |

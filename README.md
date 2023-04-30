@@ -22,3 +22,5 @@
 | [Day 16](./markdown/230426.md) | S.9 Let’s build a Drag & Drop Project (120~125)             |
 | [Day 17](./markdown/230427.md) | S.9 Let’s build a Drag & Drop Project (126~128)             |
 | [Day 18](./markdown/230428.md) | S.9 Let’s build a Drag & Drop Project (129~130)             |
+| [Day 19](./markdown/230429.md) | S.9 Let’s build a Drag & Drop Project (131)                 |
+| [Day 20](./markdown/230430.md) | S.9 Let’s build a Drag & Drop Project (132)                 |

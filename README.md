@@ -29,4 +29,6 @@
 | [Day 24](./markdown/230503.md) | S.10 Modules & Namespaces(140~141)                          |
 | [Day 25](./markdown/230504.md) | S.10 Modules & Namespaces (142~145)                         |
 | [Day 26](./markdown/230505.md) | S.10 Modules & Namespacest (146~150)                        |
-| [Day 27](./markdown/230506.md) | S.11 Using Webpack with Typescript (146~150)                |
+| [Day 27](./markdown/230506.md) | S.11 Using Webpack with Typescript (151~153)                |
+| [Day 27](./markdown/230507.md) | S.11 Using Webpack with Typescript (154~160)                |
+| [Day 27](./markdown/230508.md) | S.12 3rd Party Libraries & Typescript (161~167)             |
